@@ -73,6 +73,10 @@ git config --global user.name "<GIT_USERNAME>"
 # Add aliases
 git config --global alias.lga "log --graph --oneline --all --decorate"
 
+# Enable autocompletion
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
+  -o ~/.git-completion.bash
+
 # Create dir to persist repos
 mkdir ~/repos
 
