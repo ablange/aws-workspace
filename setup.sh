@@ -72,6 +72,7 @@ git config --global user.name "<GIT_USERNAME>"
 
 # Add aliases
 git config --global alias.lga "log --graph --oneline --all --decorate"
+git config --global alias.s "status"
 
 # Enable autocompletion
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
@@ -169,3 +170,25 @@ pyenv activate "<PROJECT>"
 
 # Deactivate venv
 pyenv deactivate
+
+####################################
+# (11) Install Other Applications
+####################################
+# Install Postman
+cd ~/Downloads/;
+wget https://dl.pstmn.io/download/latest/linux64;
+tar -xf Postman-linux-x64-8.0.4.tar.gz;
+rm Postman-linux-x64-8.0.4.tar.gz;
+sudo mv Postman /opt/;
+# Create desktop entry
+sudo nano ~/.local/share/applications/Postman.desktop;
+'''
+[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=/opt/Postman/app/Postman %U
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+'''
