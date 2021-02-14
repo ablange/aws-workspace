@@ -22,6 +22,8 @@
 # (a) Keyboard shortcuts
 # (b) Add Caja, Firefox to Panel
 # (c) Enable Firefox sync
+# (d) Remap Command key (in macOS)
+defaults write "com.amazon.Amazon WorkSpaces Client" remap_cmd_to_ctrl 0
 
 
 ####################################
