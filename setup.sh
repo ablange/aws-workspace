@@ -22,12 +22,31 @@
 # (a) Keyboard shortcuts
 # (b) Add Caja, Firefox to Panel
 # (c) Enable Firefox sync
-# (d) Remap Command key (in macOS)
-defaults write "com.amazon.Amazon WorkSpaces Client" remap_cmd_to_ctrl 0
 
 
 ####################################
-# (3) Customize bash profile
+# (3) macOS & Workspaces Client Customization
+####################################
+# (a) Enable support for high resolution displays in Workspaces client.
+# in macOS:
+# > Settings
+#   > Display Settings...
+#     > Tick 'High DPI Mode'
+
+# (d) Remap Command key (in macOS):
+defaults write "com.amazon.Amazon WorkSpaces Client" remap_cmd_to_ctrl 0
+
+# (e) Disable conflicting macOS keyboard shortcuts.
+# In macOS:
+#   > System Preferences >
+#     > Keyboard
+#       > Shortcuts
+#         > Mission Control
+#           > Disable 'Move left/right a space'
+
+
+####################################
+# (4) Customize bash profile
 ####################################
 echo "source ~/.git-prompt.sh" >> ~/.bash_profile;
 echo "alias ll='ls -all'" >> ~/.bash_profile;
@@ -42,7 +61,7 @@ source ~/.bash_profile;
 
 
 ####################################
-# (4) Install PyCharm
+# (5) Install PyCharm
 ####################################
 # Download -> https://www.jetbrains.com/pycharm/
 # Install:
@@ -66,7 +85,7 @@ cd /opt/pycham-*/bin;
 
 
 ####################################
-# (5) Setup Git
+# (6) Setup Git
 ####################################
 # Configure user/pass/name
 git config --global user.email "<GIT_EMAIL>"
@@ -85,7 +104,7 @@ mkdir ~/repos
 
 
 ####################################
-# (6) Configure AWS CLI
+# (7) Configure AWS CLI
 ####################################
 # (a) Create IAM user:
 #         > AWS Console
@@ -100,7 +119,7 @@ aws configure
 
 
 ####################################
-# (7) Configure gcloud CLI
+# (8) Configure gcloud CLI
 ####################################
 cd ~/repos/
 curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-325.0.0-darwin-x86_64.tar.gz;
@@ -117,7 +136,7 @@ gcloud config set core/project andrewblange;
 
 
 ####################################
-# (8) Install pyenv
+# (9) Install pyenv
 ####################################
 # Install OS dependencies
 sudo yum install yum-utils
@@ -135,7 +154,7 @@ eval "$(pyenv virtualenv-init -)"
 
 
 ################################
-# (9) Use pyenv to Install Python
+# (10) Use pyenv to Install Python
 ################################
 # List all available Python versions
 
@@ -162,7 +181,7 @@ pyenv uninstall 3.8.7
 
 
 ################################
-# (10) Create a Project
+# (11) Create a Project
 ################################
 # Create venv
 pyenv virtualenv 3.8.7 "<PROJECT>"
@@ -174,7 +193,7 @@ pyenv activate "<PROJECT>"
 pyenv deactivate
 
 ####################################
-# (11) Install Other Applications
+# (12) Install Other Applications
 ####################################
 # Install Postman
 cd ~/Downloads/;
