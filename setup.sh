@@ -94,6 +94,10 @@ git config --global user.name "<GIT_USERNAME>"
 # Add aliases
 git config --global alias.lga "log --graph --oneline --all --decorate"
 git config --global alias.s "status"
+git config --global alias.bs "branch -a"
+git config --global alias.d "diff"
+git config --global alias.addall "add -A"
+git config --global alias.com "commit -m"
 
 # Enable autocompletion
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
